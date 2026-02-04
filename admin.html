@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin | Inscrições</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">NCEA</div>
+        <div>
+          <h1>Área Admin</h1>
+          <p class="muted">Ver e exportar inscrições (neste dispositivo).</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Voltar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row">
+        <div>
+          <h2>Inscrições</h2>
+          <p class="muted small">Total: <span id="count">0</span></p>
+        </div>
+        <div class="row">
+          <button class="btn" id="exportCsv">Exportar CSV</button>
+          <button class="btn danger" id="clearAll">Apagar tudo</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="search">Pesquisar</label>
+        <input id="search" type="search" placeholder="Nome, curso, telefone…" />
+      </div>
+
+      <div class="tableWrap">
+        <table class="table" id="table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Curso</th>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Distrito</th>
+              <th>E-mail</th>
+              <th>Obs.</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <p id="adminStatus" class="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
