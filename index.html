@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inscrição em Cursos | NCEA</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">NCEA</div>
+        <div>
+          <h1>Inscrição de Cursos</h1>
+          <p class="muted">Preencha o formulário para garantir a sua vaga.</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="admin.html">Área Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Formulário de Inscrição</h2>
+
+      <form id="enrollForm" class="grid" autocomplete="on">
+        <div class="field">
+          <label for="course">Curso</label>
+          <select id="course" name="course" required>
+            <option value="" selected disabled>Selecione um curso…</option>
+            <option>Planeamento de Negócios & Educação Financeira (7 dias)</option>
+            <option>Canva para Negócios (7 dias)</option>
+            <option>Excel Profissional (20h)</option>
+            <option>IA/ChatGPT Aplicado (2 semanas)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="fullname">Nome completo</label>
+          <input id="fullname" name="fullname" type="text" required placeholder="Ex.: Nelson Augusto" />
+        </div>
+
+        <div class="field">
+          <label for="phone">Contacto (telefone/WhatsApp)</label>
+          <input id="phone" name="phone" type="tel" required placeholder="Ex.: 84 958 7811" />
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail (opcional)</label>
+          <input id="email" name="email" type="email" placeholder="Ex.: nome@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="district">Distrito/Cidade</label>
+          <input id="district" name="district" type="text" required placeholder="Ex.: Moatize" />
+        </div>
+
+        <div class="field">
+          <label for="occupation">Ocupação (opcional)</label>
+          <input id="occupation" name="occupation" type="text" placeholder="Ex.: Estudante / Empreendedor" />
+        </div>
+
+        <div class="field full">
+          <label for="note">Observações (opcional)</label>
+          <textarea id="note" name="note" rows="3" placeholder="Ex.: Preferência de horário, dúvidas, etc."></textarea>
+        </div>
+
+        <div class="field full">
+          <label class="check">
+            <input id="consent" type="checkbox" required />
+            <span>Confirmo que os dados acima são verdadeiros e autorizo o contacto para fins da inscrição.</span>
+          </label>
+        </div>
+
+        <div class="actions full">
+          <button class="btn primary" type="submit">Submeter inscrição</button>
+          <button class="btn" type="reset">Limpar</button>
+        </div>
+
+        <p id="status" class="status full" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Informação rápida</h2>
+      <ul class="list">
+        <li><strong>Pagamento:</strong> pode indicar no contacto após a inscrição.</li>
+        <li><strong>Vagas:</strong> limitadas (controladas pela equipa).</li>
+        <li><strong>Suporte:</strong> WhatsApp e chamada.</li>
+      </ul>
+      <p class="muted small">
+        Nota: esta versão estática guarda dados apenas neste dispositivo. Para recolha centralizada, peça a versão com Google Sheets/Firebase.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="muted">© <span id="year"></span> NCEA Consultores</span>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
